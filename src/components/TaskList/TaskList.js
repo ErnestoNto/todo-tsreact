@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const TaskContainer = styled.article`
+    width: 90%;
     max-width: 400px;
     margin: 0 auto;
     display: flex;

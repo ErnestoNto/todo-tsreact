@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Form = styled.form`
+    width: 90%;
     max-width: 400px;
     margin: 0 auto;
 
@@ -16,14 +17,22 @@ export const Label = styled.label`
 `
 
 export const Input = styled.input`
+    margin-top: 8px;
     padding: 5px;
     font-size: 1.2rem;
     outline: 0;
-    margin-bottom: 8px;
 ` 
+
+export const Error = styled.span`
+    font-size: .8rem;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    color: #ff0045;
+`
 
 export const SubmitButton = styled.button`
     padding: 5px;
+    margin-top: 8px;
     width: 100%;
     background-color: #0197F6;
     color: #fff;

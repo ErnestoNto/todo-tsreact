@@ -9,7 +9,7 @@ export const Fade = styled.div`
 ` 
 
 export const Modal = styled.div`
-    width: 500px;
+    max-width: 500px;
     height: 400px;
     margin: 0 auto;
     background-color: #fff;

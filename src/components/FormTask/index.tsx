@@ -19,6 +19,8 @@ export default function FormTask ({textButton, taskList, setTaskList, task, hand
     const [title, setTitle] = React.useState<string>('')
     const [difficult, setDifficult] = React.useState<number>(0)
 
+    const [error, setError] = React.useState<string>('')
+
     React.useEffect(() => {
         if(task){
             setId(task.id)
@@ -33,6 +35,10 @@ export default function FormTask ({textButton, taskList, setTaskList, task, hand
         if(task){
             handleUpdate!(id, title, difficult)
         }else{
+
+            if(title.length === 0){
+                return setError('Digite sua tarefa')
+            }
 
             const id = Math.floor(Math.random() * 1000)
 
@@ -55,6 +61,7 @@ export default function FormTask ({textButton, taskList, setTaskList, task, hand
                 onChange={(e:React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
                 value={title}
             />
+            {error.length > 0 && <C.Error>{error}</C.Error>}
         </div>
         <div>
             <C.Label htmlFor="title">Dificuldade: </C.Label>
